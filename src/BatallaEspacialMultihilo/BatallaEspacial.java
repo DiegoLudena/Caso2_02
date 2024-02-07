@@ -34,12 +34,12 @@ public class BatallaEspacial {
 			}
 			cuentarondas++;
 		}
-		System.out.println("La nave Zorg ha recorrido " + Zorg.getPosicion());
-		System.out.println("La nave Blip ha recorrido " + Blip.getPosicion());
+		System.out.println("La nave Zorg ha recorrido " + Zorg.getPosicion() +" parsecs");
+		System.out.println("La nave Blip ha recorrido " + Blip.getPosicion() + " parsecs");
 		if( Zorg.getPosicion()>Blip.getPosicion()) {
-			System.out.println("¡Los Zorg han ganado la batalla");
+			System.out.println("¡Los Zorg han ganado la batalla!");
 		} else if (Zorg.getPosicion()<Blip.getPosicion()) {
-			System.out.println("¡Los Zorg han ganado la batalla");
+			System.out.println("¡Los Blip han ganado la batalla!");
 		} else {
 			System.out.println("¡Ha habido un empate!");
 		}

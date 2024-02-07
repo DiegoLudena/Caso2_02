@@ -43,7 +43,7 @@ public class NaveEstelar implements Runnable{
 
 	public synchronized void Avanzar(int distancia) {
 		posicion += distancia;
-		System.out.println("La nave " + bando +" ha avanzado " +distancia +" metros!");
+		System.out.println("¡La nave " + bando +" ha avanzado " +distancia +" parsecs!");
 	}
 	
 
