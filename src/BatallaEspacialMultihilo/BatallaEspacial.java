@@ -19,7 +19,8 @@ public class BatallaEspacial {
 		while (cuentarondas<rondas) {
 			
 			//En cada ronda hay que crear un nuevo hilo y llamar a su start. De no hacerlo así da una excepción IllegalThreadStateException.
-            hiloZorg = new Thread(Zorg);
+            System.out.println("Ronda " + (cuentarondas+1) ); //Para evitar que empiece en 0 y acabe en 199
+			hiloZorg = new Thread(Zorg);
             hiloBlip = new Thread(Blip);
 			hiloZorg.start();
 			hiloBlip.start();
@@ -35,6 +36,13 @@ public class BatallaEspacial {
 		}
 		System.out.println("La nave Zorg ha recorrido " + Zorg.getPosicion());
 		System.out.println("La nave Blip ha recorrido " + Blip.getPosicion());
+		if( Zorg.getPosicion()>Blip.getPosicion()) {
+			System.out.println("¡Los Zorg han ganado la batalla");
+		} else if (Zorg.getPosicion()<Blip.getPosicion()) {
+			System.out.println("¡Los Zorg han ganado la batalla");
+		} else {
+			System.out.println("¡Ha habido un empate!");
+		}
 		
 
 	}

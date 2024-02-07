@@ -52,6 +52,13 @@ public class NaveEstelar implements Runnable{
 	public void run() {
 		//Run genera un número aleatorio y llama al método avanzar, usando ese número como argumento
 		int distancia = (int) (Math.random()*100)+1;
+		//Duermo el hilo para "dar tiempo a que avance"
+		try {
+			Thread.sleep(50);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
 		Avanzar(distancia);			
 		
 		
